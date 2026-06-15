@@ -1,0 +1,131 @@
+<div class="app-container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">LOGO</div>
+
+    <div class="search-bar">
+      <select>
+        <option>Category</option>
+      </select>
+      <input type="text" placeholder="Search..." />
+    </div>
+
+    <div class="header-icons">
+      <span class="icon">🔔</span>
+      <span class="icon">📞</span>
+      <span class="icon">👤</span>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="main-layout">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul>
+        <li><span>🏠</span></li>
+        <li><span>📄</span></li>
+        <li><span>⚙️</span></li>
+        <li><span>📊</span></li>
+        <li><span>🔐</span></li>
+        <li><span>📞</span></li>
+      </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+
+      <div class="breadcrumb">
+        Home > Admin > Access Control
+      </div>
+
+      <!-- Card -->
+      <div class="card">
+
+        <h2>Maintain Role Level Access</h2>
+
+        <div class="filter-box">
+
+  <!-- Row 1 -->
+  <div class="form-row">
+    
+    <div class="form-group">
+      <label>Role</label>
+      <input type="text" placeholder="Enter role" />
+    </div>
+
+    <div class="form-group">
+      <label>Access Control Type</label>
+      <select>
+        <option>Select Access Type</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Case Category</label>
+      <select>
+        <option>Select Category</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- Row 2 -->
+  <div class="form-row">
+
+    <div class="form-group">
+      <label>Case Sub-category</label>
+      <select>
+        <option>Select Sub-category</option>
+      </select>
+    </div>
+
+  </div>
+
+</div>
+
+        <!-- Buttons -->
+        <div class="actions">
+          <button class="btn secondary">Clear</button>
+          <button class="btn primary">Search</button>
+        </div>
+
+      </div>
+
+      <!-- Table -->
+      <div class="table-card">
+
+       
+
+        <table>
+          <thead>
+        <tr class="table-header">
+          <th colspan="5">Access controls</th>
+        <tr>
+          <th>Case Category</th>
+          <th>Case Subcategory</th>
+          <th>FieldName</th>
+          <th>Access Type</th>
+         <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{ item.role }}</td>
+          <td>{{ item.accessControlType }}</td>
+          <td>{{ item.caseCategory }}</td>
+          <td>{{ item.caseSubcategory }}</td>
+          <td>
+              <button class="small-btn">Edit</button>
+              <button class="small-btn danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+</div>
